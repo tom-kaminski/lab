@@ -19,13 +19,19 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show((BtnResponse()));
+            MessageBox.Show((BtnResponse("foo1")));
         }
 
-        private string BtnResponse()
+        public string BtnResponse(string myinput)
         {
-            string string1 = "Hello";
-            string string2 = "World";
+            string string1 = null;
+            string string2 = null;
+            if (myinput != null)
+            {
+                 string1 = "Hello";
+                 string2 = "World";
+            }
+
             return string1 + " " + string2;
         }
     }
