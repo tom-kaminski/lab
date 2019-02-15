@@ -15,13 +15,14 @@ namespace WindowsFormsApp1Tests
         public void BtnResponseTest()
         {
             //Arrange
-
+            string expected = "Hello World1";
+            string response = new WindowsFormsApp1.Form1().BtnResponse("foo");
 
             //Act
             //write act code here!
 
             //Assert
-            Assert.Fail();
+            Assert.AreEqual(expected,response);
         }
     }
 }
